@@ -68,6 +68,15 @@ public class ScaleConverter
         }
     }
 
+    /**
+    * Tries to convert the current value in current scale to a different scale.
+    * 1) Set the number to the 1:1 version (what's inside the brackets)
+    * 2) Divide it by scaleTo to make in 1:scaleTo.
+    * 3) return
+    *
+    * If at any point it encounters an error, the exception is hanlded by printing text to terminal.
+    * @return convertedNumber. -1 if it encounters a problem.
+    */
     public double convert()
     {
         try
@@ -79,6 +88,7 @@ public class ScaleConverter
         {
             System.out.println("This will probably print if you set scaleTo to zero!");
             System.out.println("Just for debugging: " + e);
+            return -1;
         }
     }
 }
