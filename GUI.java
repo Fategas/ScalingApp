@@ -62,7 +62,7 @@ public class GUI extends JFrame implements ActionListener
 
      public void showFrame()
      {
-         setSize(200,150);
+         setSize(400,400);
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          setLocationRelativeTo(null);
          setVisible(true);
