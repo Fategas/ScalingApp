@@ -54,21 +54,10 @@ public class ScaleConverter
             System.out.println("Numer podaj pajacu!");
         }
     }
-    public void setConvertedNumber(int convertedNumber)
-    {
-        try
-        {
-            this.convertedNumber = convertedNumber;
-        }
-        catch(Exception e)
-        {
-            System.out.println("Numer podaj pajacu!");
-        }
-    }
 
-    public void convert()
+    public double convert()
     {
             convertedNumber = (startingNumber * scaleFrom) / scaleTo;
-            System.out.println(startingNumber + " przemienione to: " + convertedNumber + "." );
+            return convertedNumber;
     }
 }

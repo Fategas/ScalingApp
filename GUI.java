@@ -42,6 +42,8 @@ public class GUI extends JFrame implements ActionListener
                 converter.setScaleTo(wantedScale);
 
 
+                textConverted.setText(converter.convert());
+
             }
         }
 
@@ -54,6 +56,7 @@ public class GUI extends JFrame implements ActionListener
         add(textforStartingScale);
         add(textforWantedScale);
 
+        add(textConverted);
         add(bChange);
     }
 
