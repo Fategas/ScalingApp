@@ -29,7 +29,7 @@ public class ScaleConverter
         }
         catch(Exception e)
         {
-            System.out.println("Numer podaj pajacu!");
+            System.out.println("Error!" + e);
         }
     }
     public void setScaleTo(int scaleTo)
@@ -40,7 +40,7 @@ public class ScaleConverter
         }
         catch(Exception e)
         {
-            System.out.println("Numer podaj pajacu!");
+            System.out.println("Error!" + e);
         }
     }
     public void setStartingNumber(int startingNumber)
@@ -51,7 +51,7 @@ public class ScaleConverter
         }
         catch(Exception e)
         {
-            System.out.println("Numer podaj pajacu!");
+            System.out.println("Error!" + e);
         }
     }
 

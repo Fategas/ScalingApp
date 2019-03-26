@@ -5,10 +5,10 @@ import javax.swing.*;
  * This class will show a gui and use the existing scaleConverter class
  * to convert scales.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Dawid Michniuk
+ * @version 0.01a
  */
-public class GUI extends JFrame implements ActionListener
+public class GUI extends JFrame
 {
     private ScaleConverter converter;
     private JButton bChange;
@@ -18,7 +18,7 @@ public class GUI extends JFrame implements ActionListener
      */
     public GUI()
     {
-        super("SKALUJ!");
+        super("SCALE!");
         makeFrame();
         showFrame();
 
@@ -45,7 +45,7 @@ public class GUI extends JFrame implements ActionListener
                 textConverted.setText(converter.convert());
 
             }
-        }
+        });
 
         textforStartingNumber = new JTextField(5);
         textforStartingScale = new JTextField(5);
