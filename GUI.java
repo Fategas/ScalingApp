@@ -53,11 +53,16 @@ public class GUI extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                int startingNumber = textforStartingNumber.getText();
+                int startingNumber =
+                Integer.parseInt(textforStartingNumber.getText());
                 converter.setStartingNumber(startingNumber);
-                int startingScale = textforStartingScale.getText();
+                
+                int startingScale =
+                Integer.parseInt(textforStartingScale.getText());
                 converter.setScaleFrom(startingScale);
-                int wantedScale = textforWantedScale.getText();
+
+                int wantedScale =
+                Integer.parseInt(textforWantedScale.getText());
                 converter.setScaleTo(wantedScale);
 
 
