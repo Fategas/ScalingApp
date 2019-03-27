@@ -61,7 +61,7 @@ public class GUI extends JFrame
 
             if(startingNumber != 0 && startingScale != 0 && wantedScale != 0)
             {
-                int convertedNumber = (startingNumber+startingScale) / wantedScale;
+                int convertedNumber = (startingNumber*startingScale) / wantedScale;
                 textConverted.setText( "" + convertedNumber);
             }
 
