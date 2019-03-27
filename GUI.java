@@ -17,7 +17,6 @@ import javax.swing.*;
 public class GUI extends JFrame
 {
     //initialize variables
-    private ScaleConverter converter;
     private JTextField textforStartingNumber,textforStartingScale,textforWantedScale,textConverted;
     private int startingNumber,startingScale,wantedScale;
     /**
