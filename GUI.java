@@ -37,9 +37,9 @@ public class GUI extends JFrame
     {
         while(true)
         {
-            boolean testForNumber = textforStartingNumber.getText().equals("");
-            boolean testStartingScale = textforStartingScale.getText().equals("");
-            boolean testWantedScale = textforWantedScale.getText().equals("");
+            boolean testForNumber = textforStartingNumber.getText().isEmpty;
+            boolean testStartingScale = textforStartingScale.getText().isEmpty;
+            boolean testWantedScale = textforWantedScale.getText().isEmpty;
             //By default 0.
             if(!testForNumber)
             {
