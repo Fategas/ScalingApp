@@ -18,7 +18,8 @@ public class GUI extends JFrame
 {
     //initialize variables
     private JTextField textforStartingNumber,textforStartingScale,textforWantedScale,textConverted;
-    private int startingNumber,startingScale,wantedScale;
+    private int startingScale,wantedScale;
+    private double startingNumber;
     /**
      * Calls JFrame's constructor which allows us to set the window's name.
      * it then makes the frame and shows it to the user using an appropriate method.
@@ -43,7 +44,7 @@ public class GUI extends JFrame
             if(!testForNumber)
             {
                 startingNumber =
-                Integer.parseInt(textforStartingNumber.getText());
+                Double.parseDouble(textforStartingNumber.getText());
             }
 
             if(!testStartingScale)
@@ -60,7 +61,7 @@ public class GUI extends JFrame
 
             if(startingNumber != 0 && startingScale != 0 && wantedScale != 0)
             {
-                int convertedNumber = (startingNumber*startingScale) / wantedScale;
+                double convertedNumber = (startingNumber*startingScale) / wantedScale;
                 textConverted.setText( "" + convertedNumber);
             }
 
