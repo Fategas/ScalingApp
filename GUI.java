@@ -18,8 +18,8 @@ public class GUI extends JFrame
 {
     //initialize variables
     private ScaleConverter converter;
-    private JButton bChange;
     private JTextField textforStartingNumber,textforStartingScale,textforWantedScale,textConverted;
+    private int startingNumber,startingScale,wantedScale;
     /**
      * Calls JFrame's constructor which allows us to set the window's name.
      * it then makes the frame and shows it to the user using an appropriate method.
@@ -30,8 +30,44 @@ public class GUI extends JFrame
         super("SCALE!");
         makeFrame();
         showFrame();
-
+        loopty();
     }
+
+    public void loopty()
+    {
+        while(true)
+        {
+            boolean testForNumber = textforStartingNumber.getText().equals("");
+            boolean testStartingScale = textforStartingScale.getText().equals("");
+            boolean testWantedScale = textforWantedScale.getText().equals("");
+            //By default 0.
+            if(!testForNumber)
+            {
+                startingNumber =
+                Integer.parseInt(textforStartingNumber.getText());
+            }
+
+            if(!testStartingScale)
+            {
+                startingScale =
+                Integer.parseInt(textforStartingScale.getText());
+            }
+
+            if(!testWantedScale)
+            {
+                wantedScale =
+                Integer.parseInt(textforWantedScale.getText());
+            }
+
+            if(startingNumber != 0 && startingScale != 0 && wantedScale != 0)
+            {
+                int convertedNumber = (startingNumber+startingScale) / wantedScale;
+                textConverted.setText( "" + convertedNumber);
+            }
+
+        }
+    }
+
 
     /**
     * When the button is pressed, it should getText (numbers in this case) inside every textarea,
@@ -40,36 +76,10 @@ public class GUI extends JFrame
     * TODO: change actionlistener to a while(true) loop.
     *
     * Textareas are set to width of 5 and then added to the container, so is the bChange (buttonChange).
-    *
-    *
     */
     public void makeFrame()
     {
         setLayout(new FlowLayout());
-
-        bChange = new JButton("Convert");
-        bChange.addActionListener( new ActionListener()
-        {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                int startingNumber =
-                Integer.parseInt(textforStartingNumber.getText());
-                converter.setStartingNumber(startingNumber);
-                
-                int startingScale =
-                Integer.parseInt(textforStartingScale.getText());
-                converter.setScaleFrom(startingScale);
-
-                int wantedScale =
-                Integer.parseInt(textforWantedScale.getText());
-                converter.setScaleTo(wantedScale);
-
-
-                textConverted.setText(converter.convert());
-
-            }
-        });
 
         textforStartingNumber = new JTextField(5);
         textforStartingScale = new JTextField(5);
@@ -81,7 +91,7 @@ public class GUI extends JFrame
         add(textforWantedScale);
 
         add(textConverted);
-        add(bChange);
+
     }
 
     /**
