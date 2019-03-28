@@ -58,13 +58,13 @@ public class GUI extends JFrame
                 //save text from textform
                 try
                 {
-                    double startingNumber =
+                    startingNumber =
                     Double.parseDouble(textforStartingNumber.getText());
 
-                    int startingScale =
+                    startingScale =
                     Integer.parseInt(textforStartingScale.getText());
 
-                    int wantedScale =
+                    wantedScale =
                     Integer.parseInt(textforWantedScale.getText());
 
 
@@ -81,7 +81,7 @@ public class GUI extends JFrame
                 }
                 catch(NumberFormatException ex)
                 {
-                    JOptionPane.showMessageDialog(new JFrame(), "You didn't add anything yet!");
+                    JOptionPane.showMessageDialog(new JFrame(), "You didn't add something!");
                 }
             }
         });
