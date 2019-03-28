@@ -9,7 +9,7 @@ package GUI;
  * Driver for gui class.
  *
  * @author Dawid Michniuk
- * @version 0.1a
+ * @version 1
  */
 public class GUIDriver
 {

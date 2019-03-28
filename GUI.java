@@ -20,7 +20,7 @@ import javax.swing.*;
  * change layout around to make it more plesant to read
  *
  * @author Dawid Michniuk
- * @version 1.0
+ * @version 1.1
  */
 public class GUI extends JFrame
 {
