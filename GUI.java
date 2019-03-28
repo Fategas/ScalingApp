@@ -8,7 +8,7 @@ import javax.swing.*;
  * and the scale they want to have this number converted into.
  * It should display a textarea that will show the converted number after clicking submit.
  *
- * TODO: javadoc, bug fixes, convert actionlistener into a infinite loop,
+ * TODO: bug fixes.
  * change layout around to make it more plesant to read
  *
  * @author Dawid Michniuk
@@ -18,6 +18,7 @@ public class GUI extends JFrame
 {
     //initialize variables
     private JTextField textforStartingNumber,textforStartingScale,textforWantedScale,textConverted;
+    private JButton bchange;
     private int startingScale,wantedScale;
     private double startingNumber;
     /**
@@ -32,48 +33,10 @@ public class GUI extends JFrame
         showFrame();
         loopty();
     }
-
-    public void loopty()
-    {
-        while(true)
-        {
-            boolean testForNumber = textforStartingNumber.getText().isEmpty;
-            boolean testStartingScale = textforStartingScale.getText().isEmpty;
-            boolean testWantedScale = textforWantedScale.getText().isEmpty;
-            //By default 0.
-            if(!testForNumber)
-            {
-                startingNumber =
-                Double.parseDouble(textforStartingNumber.getText());
-            }
-
-            if(!testStartingScale)
-            {
-                startingScale =
-                Integer.parseInt(textforStartingScale.getText());
-            }
-
-            if(!testWantedScale)
-            {
-                wantedScale =
-                Integer.parseInt(textforWantedScale.getText());
-            }
-
-            if(startingNumber != 0 && startingScale != 0 && wantedScale != 0)
-            {
-                double convertedNumber = (startingNumber*startingScale) / wantedScale;
-                textConverted.setText( "" + convertedNumber);
-            }
-
-        }
-    }
-
-
     /**
     * When the button is pressed, it should getText (numbers in this case) inside every textarea,
     * use ScaleConverter's appropriate method to set and then convert to set scale
     * and set this as a text in textConverted textarea (which I somehow will disable as area user can type in)
-    * TODO: change actionlistener to a while(true) loop.
     *
     * Textareas are set to width of 5 and then added to the container, so is the bChange (buttonChange).
     */
@@ -86,12 +49,36 @@ public class GUI extends JFrame
         textforWantedScale = new JTextField(5);
         textConverted = new JTextField(5);
 
+        bChange = new JButton("Convert");
+        bChange.addActionListener( new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                int startingNumber =
+                Integer.parseInt(textforStartingNumber.getText());
+                converter.setStartingNumber(startingNumber);
+
+                int startingScale =
+                Integer.parseInt(textforStartingScale.getText());
+                converter.setScaleFrom(startingScale);
+
+                int wantedScale =
+                Integer.parseInt(textforWantedScale.getText());
+                converter.setScaleTo(wantedScale);
+
+
+                textConverted.setText(converter.convert());
+
+            }
+        });
+
+
         add(textforStartingNumber);
         add(textforStartingScale);
         add(textforWantedScale);
 
         add(textConverted);
-
     }
 
     /**
