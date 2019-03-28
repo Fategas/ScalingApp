@@ -18,7 +18,7 @@ public class GUI extends JFrame
 {
     //initialize variables
     private JTextField textforStartingNumber,textforStartingScale,textforWantedScale,textConverted;
-    private JButton bchange;
+    private JButton bChange;
     private int startingScale,wantedScale;
     private double startingNumber;
     /**
@@ -31,7 +31,6 @@ public class GUI extends JFrame
         super("SCALE!");
         makeFrame();
         showFrame();
-        loopty();
     }
     /**
     * When the button is pressed, it should getText (numbers in this case) inside every textarea,
@@ -55,20 +54,21 @@ public class GUI extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                int startingNumber =
-                Integer.parseInt(textforStartingNumber.getText());
-                converter.setStartingNumber(startingNumber);
+                double startingNumber =
+                Double.parseDouble(textforStartingNumber.getText());
 
                 int startingScale =
                 Integer.parseInt(textforStartingScale.getText());
-                converter.setScaleFrom(startingScale);
 
                 int wantedScale =
                 Integer.parseInt(textforWantedScale.getText());
-                converter.setScaleTo(wantedScale);
 
 
-                textConverted.setText(converter.convert());
+                if(startingNumber != 0 && startingScale != 0 && wantedScale != 0)
+                {
+                    double convertedNumber = (startingNumber*startingScale) / wantedScale;
+                    textConverted.setText( "" + convertedNumber);
+                }
 
             }
         });
@@ -77,8 +77,10 @@ public class GUI extends JFrame
         add(textforStartingNumber);
         add(textforStartingScale);
         add(textforWantedScale);
-
+        
+        add(bChange);
         add(textConverted);
+        
     }
 
     /**
@@ -88,7 +90,7 @@ public class GUI extends JFrame
     */
      public void showFrame()
      {
-         setSize(400,400);
+         setSize(400,100);
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          setLocationRelativeTo(null);
          setVisible(true);

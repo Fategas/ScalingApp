@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=GUI
+comment0.text=\r\n\ This\ class\ will\ show\ a\ Graphical\ interface\ and\ use\ the\ existing\ ScaleConverter\ class\r\n\ to\ convert\ scales.\r\n\ Users\ will\ be\ able\ to\ chose\ the\ initial\ number,\ the\ original\ scale\r\n\ and\ the\ scale\ they\ want\ to\ have\ this\ number\ converted\ into.\r\n\ It\ should\ display\ a\ textarea\ that\ will\ show\ the\ converted\ number\ after\ clicking\ submit.\r\n\r\n\ TODO\:\ bug\ fixes.\r\n\ change\ layout\ around\ to\ make\ it\ more\ plesant\ to\ read\r\n\r\n\ @author\ Dawid\ Michniuk\r\n\ @version\ 0.01a\r\n
+comment1.params=
+comment1.target=GUI()
+comment1.text=\r\n\ Calls\ JFrame's\ constructor\ which\ allows\ us\ to\ set\ the\ window's\ name.\r\n\ it\ then\ makes\ the\ frame\ and\ shows\ it\ to\ the\ user\ using\ an\ appropriate\ method.\r\n
+comment2.params=
+comment2.target=void\ makeFrame()
+comment2.text=\r\n\ When\ the\ button\ is\ pressed,\ it\ should\ getText\ (numbers\ in\ this\ case)\ inside\ every\ textarea,\r\n\ use\ ScaleConverter's\ appropriate\ method\ to\ set\ and\ then\ convert\ to\ set\ scale\r\n\ and\ set\ this\ as\ a\ text\ in\ textConverted\ textarea\ (which\ I\ somehow\ will\ disable\ as\ area\ user\ can\ type\ in)\r\n\r\n\ Textareas\ are\ set\ to\ width\ of\ 5\ and\ then\ added\ to\ the\ container,\ so\ is\ the\ bChange\ (buttonChange).\r\n
+comment3.params=e
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=
+comment4.target=void\ showFrame()
+comment4.text=\r\n\ Simply\ sets\ the\ size\ of\ the\ window,\ what\ it\ should\ do\ when\ users\ clicks\ close\r\n\ (By\ default\ it\ would\ run\ in\ the\ background,\ this\ forces\ it\ to\ actually\ close\ the\ program)\r\n\ Location\ will\ be\ the\ center\ of\ the\ screen,\ and\ only\ then\ it\ will\ become\ visible\ to\ the\ user.\r\n
+numComments=5
