@@ -1,6 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package GUI;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
 /**
  * This class will show a Graphical interface and use the existing ScaleConverter class
  * to convert scales.
@@ -48,6 +56,8 @@ public class GUI extends JFrame
         textforWantedScale = new JTextField(5);
         textConverted = new JTextField(5);
 
+        textConverted.setEditable(false);
+
         bChange = new JButton("Convert");
         //when button is pressed to this:
         bChange.addActionListener( new ActionListener()
@@ -58,13 +68,13 @@ public class GUI extends JFrame
                 //save text from textform
                 try
                 {
-                    startingNumber =
+                    double startingNumber =
                     Double.parseDouble(textforStartingNumber.getText());
 
-                    startingScale =
+                    int startingScale =
                     Integer.parseInt(textforStartingScale.getText());
 
-                    wantedScale =
+                    int wantedScale =
                     Integer.parseInt(textforWantedScale.getText());
 
 
