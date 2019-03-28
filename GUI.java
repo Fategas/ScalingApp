@@ -12,7 +12,7 @@ import javax.swing.*;
  * change layout around to make it more plesant to read
  *
  * @author Dawid Michniuk
- * @version 0.01a
+ * @version 1.0
  */
 public class GUI extends JFrame
 {
@@ -77,10 +77,10 @@ public class GUI extends JFrame
         add(textforStartingNumber);
         add(textforStartingScale);
         add(textforWantedScale);
-        
+
         add(bChange);
         add(textConverted);
-        
+
     }
 
     /**
