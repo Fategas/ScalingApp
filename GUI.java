@@ -55,27 +55,34 @@ public class GUI extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                //save text from
-                double startingNumber =
-                Double.parseDouble(textforStartingNumber.getText());
-
-                int startingScale =
-                Integer.parseInt(textforStartingScale.getText());
-
-                int wantedScale =
-                Integer.parseInt(textforWantedScale.getText());
-
-
-                if(startingNumber > 0 && startingScale > 0 && wantedScale > 0)
+                //save text from textform
+                try
                 {
-                    double convertedNumber = (startingNumber*startingScale) / wantedScale;
-                    textConverted.setText( "" + convertedNumber);
-                }
-                else
-                {
-                    JOptionPane.showMessageDialog(frame, "You would probably divide by zero!");
-                }
+                    double startingNumber =
+                    Double.parseDouble(textforStartingNumber.getText());
 
+                    int startingScale =
+                    Integer.parseInt(textforStartingScale.getText());
+
+                    int wantedScale =
+                    Integer.parseInt(textforWantedScale.getText());
+
+
+                    if(startingNumber > 0 && startingScale > 0 && wantedScale > 0)
+                    {
+                        double convertedNumber = (startingNumber*startingScale) / wantedScale;
+                        textConverted.setText( "" + convertedNumber);
+                    }
+                    else
+                    {
+                        JOptionPane.showMessageDialog(new JFrame(), "At least one input is empty or zet to zero or below that!");
+                    }
+
+                }
+                catch(NumberFormatException ex)
+                {
+                    JOptionPane.showMessageDialog(new JFrame(), "You didn't add anything yet!");
+                }
             }
         });
 

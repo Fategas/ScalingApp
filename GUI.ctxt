@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GUI
-comment0.text=\r\n\ This\ class\ will\ show\ a\ Graphical\ interface\ and\ use\ the\ existing\ ScaleConverter\ class\r\n\ to\ convert\ scales.\r\n\ Users\ will\ be\ able\ to\ chose\ the\ initial\ number,\ the\ original\ scale\r\n\ and\ the\ scale\ they\ want\ to\ have\ this\ number\ converted\ into.\r\n\ It\ should\ display\ a\ textarea\ that\ will\ show\ the\ converted\ number\ after\ clicking\ submit.\r\n\r\n\ TODO\:\ bug\ fixes.\r\n\ change\ layout\ around\ to\ make\ it\ more\ plesant\ to\ read\r\n\r\n\ @author\ Dawid\ Michniuk\r\n\ @version\ 0.01a\r\n
+comment0.text=\r\n\ This\ class\ will\ show\ a\ Graphical\ interface\ and\ use\ the\ existing\ ScaleConverter\ class\r\n\ to\ convert\ scales.\r\n\ Users\ will\ be\ able\ to\ chose\ the\ initial\ number,\ the\ original\ scale\r\n\ and\ the\ scale\ they\ want\ to\ have\ this\ number\ converted\ into.\r\n\ It\ should\ display\ a\ textarea\ that\ will\ show\ the\ converted\ number\ after\ clicking\ submit.\r\n\r\n\ TODO\:\ bug\ fixes.\r\n\ change\ layout\ around\ to\ make\ it\ more\ plesant\ to\ read\r\n\r\n\ @author\ Dawid\ Michniuk\r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=GUI()
 comment1.text=\r\n\ Calls\ JFrame's\ constructor\ which\ allows\ us\ to\ set\ the\ window's\ name.\r\n\ it\ then\ makes\ the\ frame\ and\ shows\ it\ to\ the\ user\ using\ an\ appropriate\ method.\r\n
