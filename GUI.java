@@ -49,11 +49,13 @@ public class GUI extends JFrame
         textConverted = new JTextField(5);
 
         bChange = new JButton("Convert");
+        //when button is pressed to this:
         bChange.addActionListener( new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                //save text from
                 double startingNumber =
                 Double.parseDouble(textforStartingNumber.getText());
 
@@ -64,10 +66,14 @@ public class GUI extends JFrame
                 Integer.parseInt(textforWantedScale.getText());
 
 
-                if(startingNumber != 0 && startingScale != 0 && wantedScale != 0)
+                if(startingNumber > 0 && startingScale > 0 && wantedScale > 0)
                 {
                     double convertedNumber = (startingNumber*startingScale) / wantedScale;
                     textConverted.setText( "" + convertedNumber);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(frame, "You would probably divide by zero!");
                 }
 
             }
