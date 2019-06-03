@@ -6,7 +6,7 @@
 package com.Fategas.GUI;
 
 /**
- * Driver for gui class.
+ * Driver for gui class. Not much to see here. This just runs the app.
  *
  * @author Dawid Michniuk
  * @version 1
