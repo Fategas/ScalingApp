@@ -55,11 +55,13 @@ public class GUI extends JFrame
         
         textConverted = new JTextField(5);
         textConverted.setEditable(false);
+        //This is supposed to make it so it auto expands when there are too many
+        //numbers.
         JScrollPane scrollArea = new JScrollPane(textConverted);
 
         bChange = new JButton("Convert");
         //when button is pressed to this:
-        //Added a lambda function to utilize multi core speed.
+        //Changed it to a lambda function to utilize multi core speed.
         bChange.addActionListener((ActionEvent e) -> {
             //save text from textform
             try {
@@ -81,10 +83,9 @@ public class GUI extends JFrame
         add(textforStartingNumber);
         add(textforStartingScale);
         add(textforWantedScale);
-
+        
         add(bChange);
         add(scrollArea);
-
     }
     /**
     * Simply sets the size of the window, what it should do when users clicks close
