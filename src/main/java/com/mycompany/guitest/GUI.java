@@ -59,6 +59,7 @@ public class GUI extends JFrame
 
         bChange = new JButton("Convert");
         //when button is pressed to this:
+        //Added a lambda function to utilize multi core speed.
         bChange.addActionListener((ActionEvent e) -> {
             //save text from textform
             try {
