@@ -1,4 +1,4 @@
-package GUI;
+package com.Fategas.GUI;
 
 import java.awt.*;
 import java.awt.event.*;
